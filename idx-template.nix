@@ -17,9 +17,10 @@
 			mkdir "$out"
         composer global require laravel/installer
         export PATH=~/.config/composer/vendor/bin:$PATH
-        laravel new "$out"
-        composer create-project laravel/laravel "$out"
-			mkdir -p "$out"/.idx
+        
+        laravel new "$out" ${if unit_test == "pest" then "--pest" else "--phpunit"}
+        # composer create-project laravel/laravel "$out"
+		# 	mkdir -p "$out"/.idx
   		cp ${./dev.nix} "$out"/.idx/dev.nix
     '';
 }

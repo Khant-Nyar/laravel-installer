@@ -1,8 +1,27 @@
 {
-    "name": "Laravel",
-    "description": "Unofficial Laravel template ",
-    "categories": [
-      "Backend"
-    ],
-    "icon": "https://www.gstatic.com/monospace/240118/logo_laravel.svg"
-  }
+  "name": "Laravel Installer",
+  "description": "Unofficial Laravel template ",
+  "categories": [
+    "Backend"
+  ],
+  "icon": "https://www.gstatic.com/monospace/240118/logo_laravel.svg",
+  "params": [
+    {
+      "id": "unit_test",
+      "name": "Unit Test",
+      "type": "enum",
+      "default": "pest",
+      "options": {
+        "pest": "Pest",
+        "unit_test": "UnitTest"
+      }
+    },
+    {
+      "id": "git",
+      "name": "Init git",
+      "type": "boolean",
+      "default": true,
+      "required": false
+    }
+  ]
+}

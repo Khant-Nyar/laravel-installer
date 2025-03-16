@@ -9,6 +9,7 @@
         pkgs.php83Packages.composer
         pkgs.nodejs_20
         pkgs.mariadb
+        pkgs.laravel
     ];
     
     # Enable services like PostgreSQL and Docker

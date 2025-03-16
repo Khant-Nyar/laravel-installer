@@ -20,7 +20,7 @@
         
         laravel new "$out" ${if unit_test == "pest" then "--pest" else "--phpunit"}
         # composer create-project laravel/laravel "$out"
-		# 	mkdir -p "$out"/.idx
+		 	mkdir -p "$out"/.idx
   		cp ${./dev.nix} "$out"/.idx/dev.nix
     '';
 }

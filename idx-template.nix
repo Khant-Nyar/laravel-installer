@@ -14,9 +14,10 @@
     bootstrap = ''
         mkdir composer-home
         export COMPOSER_HOME=./composer-home
-			mkdir "$out"
+		mkdir "$out"
+        
         #composer global require laravel/installer
-        #export PATH=~/.config/composer/vendor/bin:$PATH
+        #export PATH=$COMPOSER_HOME/vendor/bin:$PATH
         
         laravel new "$out" ${if unit_test == "pest" then "--pest" else "--phpunit"}
         # composer create-project laravel/laravel "$out"
